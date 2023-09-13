@@ -1,0 +1,60 @@
+.gen-section {
+  padding: 0 30px;
+  color: white;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.gen-section .carousel {
+  margin: 15px 0;
+  display: -webkit-flex;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 16px 16px;
+}
+
+.gen-section .carousel .items {
+  scroll-snap-align: start;
+}
+
+.gen-section .items {
+  margin: 0 15px;
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.items .item-desc {
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gen-section .items.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.gen-section .item-desc h3 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 25px;
+}

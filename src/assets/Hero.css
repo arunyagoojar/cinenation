@@ -1,0 +1,95 @@
+.game-section {
+  padding: 0 30px;
+  color: white;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.game-section .carousel {
+  margin: 15px 0;
+  display: -webkit-flex;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 16px;
+}
+
+.game-section .carousel .item {
+  scroll-snap-align: start;
+}
+
+.game-section .item {
+  margin: 0 15px;
+  width: 570px;
+  height: 300px;
+  display: flex;
+  flex: none;
+  scroll-snap-align: center;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.game-section .item-desc  {
+  width: 100%;
+  padding: 0; /* remove padding */
+  color: #fff;
+  background: linear-gradient(0deg, rgba(0,0,0,0.9468853947829131) 0%, rgba(0,0,0,0.924476431197479) 20%, rgba(0,0,0,0.8740562631302521) 29%, rgba(0,0,0,0.8572495404411764) 36%, rgba(0,0,0,0.8124316132703081) 49%, rgba(0,0,0,0.7424036020658263) 60%, rgba(0,212,255,0) 100%);
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+
+.game-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.game-section .item-desc p {
+  margin: 0.7em 0.7em 0.7em 1em;
+  padding-top: 10px;
+  opacity: 0.75;
+  font-size: 15px;
+  text-align: justify;
+
+}
+.game-section .item-desc h3 {
+  margin: 0;
+  padding: 10px 48px 0 0;
+  font-size: 40px;
+}
+
+.game-section .carousel .item .rating {
+  margin-left: 0.5em;
+  height: 10px;
+  font-size: 10px !important;
+  display: flex;
+  width: min-content;
+}
+
+.game-section .carousel .item .rating label {
+  flex-grow: 1;
+}
+
+.game-section .carousel .item .rating input {
+  display: none;
+}
+
+.game-section .carousel .item .rating .star{
+  display: block;
+  text-align: center;
+  padding: 0.5em 0.5em;
+}

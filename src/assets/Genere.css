@@ -1,0 +1,63 @@
+.gen-section {
+  padding: 0 30px;
+  color: white;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.gen-section .carousel {
+  margin: 15px 0;
+  height: 100px;
+  display: -webkit-flex;
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 16px 16px;
+}
+
+.gen-section .carousel .items {
+  scroll-snap-align: start;
+}
+
+.gen-section .items {
+  border-radius: 16px;
+  text-align: center;
+  margin: 0 15px;
+  width: 200px;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.items .item-desc {
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gen-section .items.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.gen-section .item-desc h3 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 25px;
+}
